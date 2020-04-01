@@ -526,7 +526,7 @@ fieldset:nth-child(2) .wrapcheckform {
   display: flex;
   flex-direction: column;
 }
-fieldset:nth-child(2) label {
+fieldset:nth-child(2) p {
   font-size: 0.9em;
   padding-bottom: 0.6em;
 }
@@ -536,7 +536,7 @@ fieldset:nth-child(2) input {
 fieldset:nth-child(2) .choice:nth-last-child(1) {
   margin-bottom: 1.5em;
 }
-fieldset:nth-child(2) p {
+fieldset:nth-child(2) label {
   margin: 9px 0;
 }
 fieldset:nth-child(2) .labeltxt {
