@@ -337,6 +337,12 @@ template {
   display: none;
 }
 
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+}
+
 .title {
   margin: 0;
   padding: 25px 0;
@@ -376,11 +382,11 @@ template {
 
 p {
   font-size: 0.9em;
-  color: #000000b3;
+  color: #6c869f;
 }
 
 label {
-  color: #000000b3;
+  color: #6c869f;
 }
 
 * {
@@ -394,6 +400,7 @@ body {
 .wrapper {
   max-width: 768px;
   margin: 0 auto;
+  background-color: #fff;
 }
 
 form {
@@ -418,9 +425,6 @@ fieldset legend {
   fieldset legend {
     padding-top: 50px;
   }
-}
-fieldset input:focus {
-  border: 2px solid #2d3945;
 }
 
 fieldset:nth-child(1) label {
@@ -447,13 +451,13 @@ fieldset:nth-child(1) input {
   border-radius: 3px;
   padding-left: 1em;
   padding-right: 1em;
-  color: #000000b3;
+  color: #2d3945;
 }
 fieldset:nth-child(1) input:focus {
   border: 2px solid #2d3945;
 }
 fieldset:nth-child(1) input::placeholder {
-  color: rgba(153, 153, 153, 0.6);
+  color: #aab9c7;
 }
 fieldset:nth-child(1) input:nth-of-type(1)::placeholder, fieldset:nth-child(1) input:nth-of-type(2)::placeholder {
   font-size: 0.8em;
@@ -476,6 +480,9 @@ fieldset:nth-child(1) input:nth-last-of-type(1) {
     margin: 10px 0;
   }
 }
+fieldset:nth-child(1) input:focus {
+  border: 2px solid #4ebbb5;
+}
 fieldset:nth-child(1) select {
   display: inline-block;
   width: 99%;
@@ -488,18 +495,22 @@ fieldset:nth-child(1) select {
   padding-left: 1em;
   padding-right: 1em;
   padding: 0 1em;
+  color: #2d3945;
 }
 fieldset:nth-child(1) select:focus {
   border: 2px solid #2d3945;
 }
-fieldset:nth-child(1) select :not(:nth-child(1)) {
-  color: #000000b3;
+fieldset:nth-child(1) select option {
+  color: #2d3945;
 }
 @media (min-width: 768px) {
   fieldset:nth-child(1) select {
     width: 79%;
     margin: 10px 0;
   }
+}
+fieldset:nth-child(1) select:invalid {
+  color: #aab9c7;
 }
 
 fieldset:nth-child(2) input,
@@ -541,6 +552,8 @@ fieldset:nth-child(2) textarea {
   width: 100%;
   min-height: 100px;
   border: none;
+  padding: 10px;
+  color: #6c869f;
 }
 fieldset:nth-child(2) textarea:focus {
   border: 2px solid #2d3945;
@@ -548,6 +561,10 @@ fieldset:nth-child(2) textarea:focus {
 fieldset:nth-child(2) textarea::placeholder {
   padding-top: 10px;
   font-size: 0.8em;
+  color: #aab9c7;
+}
+fieldset:nth-child(2) textarea:focus {
+  border: 2px solid #4ebbb5;
 }
 
 .submit {
@@ -566,7 +583,7 @@ fieldset:nth-child(2) textarea::placeholder {
   width: 100%;
   text-align: center;
   font-style: italic;
-  color: rgba(153, 153, 153, 0.6);
+  color: #aab9c7;
 }
 
 /*# sourceMappingURL=style.css.map */

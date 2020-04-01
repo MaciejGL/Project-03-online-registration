@@ -4,11 +4,14 @@ form {
     box-shadow: 0px -3px 0px 0px $white, 0px -7px 0px 0px $primary-color;
 }
 
+
+
 fieldset {
     border: 0;
     padding: 0;
     margin-left: 0;
     margin-right: 0;
+
 
 
     legend {
@@ -22,10 +25,6 @@ fieldset {
                 padding-top: 50px;
             }
         }
-    }
-
-    input:focus {
-        border: 2px solid $primary-color;
     }
 
 }
@@ -48,7 +47,9 @@ fieldset:nth-child(1) {
     input {
         @include block(99%, inline-block);
         @include inputStyle;
-        color: $secondary-color;
+        color: $primary-color;
+
+
 
         &::placeholder {
             color: $secondary-color-light;
@@ -79,6 +80,10 @@ fieldset:nth-child(1) {
                 margin: 10px 0;
             }
         }
+
+        &:focus {
+            border: 2px solid $additional-color;
+        }
     }
 
     select {
@@ -87,9 +92,10 @@ fieldset:nth-child(1) {
         @include inputStyle;
 
         padding: 0 1em;
+        color: $primary-color;
 
-        :not(:nth-child(1)) {
-            color: $secondary-color;
+        option {
+            color: $primary-color
         }
 
         @media (min-width: 768px) {
@@ -97,6 +103,10 @@ fieldset:nth-child(1) {
                 width: 79%;
                 margin: 10px 0;
             }
+        }
+
+        &:invalid {
+            color: $secondary-color-light
         }
     }
 }
@@ -148,10 +158,18 @@ fieldset:nth-child(2) {
         width: 100%;
         min-height: 100px;
         border: none;
+        padding: 10px;
+
+        color: $secondary-color;
 
         &::placeholder {
             padding-top: 10px;
             font-size: 0.8em;
+            color: $secondary-color-light;
+        }
+
+        &:focus {
+            border: 2px solid $additional-color;
         }
     }
 
