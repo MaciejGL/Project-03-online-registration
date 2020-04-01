@@ -1,0 +1,11 @@
+@mixin title {
+    text-align: center;
+    font-size: 1.2em;
+}
+
+@mixin block($width: 100%) {
+    display: block;
+    width: $width;
+    margin-left: auto;
+    margin-right: auto;
+}

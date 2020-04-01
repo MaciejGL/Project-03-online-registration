@@ -1,0 +1,28 @@
+.title {
+    margin: 0;
+    padding: 25px 0;
+    @include title;
+    text-transform: uppercase;
+    color: $white;
+    background-color: $primary-color;
+
+    &-form {
+        @include title;
+        padding-top: 20px;
+        color: $primary-color;
+
+        +p {
+            padding-bottom: 27px;
+            text-align: center;
+        }
+    }
+}
+
+p {
+    font-size: 0.9em;
+    color: $secondary-color;
+}
+
+label {
+    color: $secondary-color;
+}
