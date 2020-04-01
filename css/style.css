@@ -359,11 +359,11 @@ template {
 
 p {
   font-size: 0.9em;
-  color: rgba(0, 0, 0, 0.7);
+  color: #000000b3;
 }
 
 label {
-  color: rgba(0, 0, 0, 0.7);
+  color: #000000b3;
 }
 
 * {
@@ -394,6 +394,10 @@ fieldset legend {
   padding: 25px 0;
   font-weight: bold;
   font-size: 1.2em;
+  color: #2d3945;
+}
+fieldset input:focus {
+  border: 2px solid #2d3945;
 }
 
 fieldset:nth-child(1) label {
@@ -412,9 +416,14 @@ fieldset:nth-child(1) input {
   border: none;
   background-color: #eee;
   border-radius: 3px;
+  padding-left: 1em;
+  padding-right: 1em;
+  color: #000000b3;
+}
+fieldset:nth-child(1) input:focus {
+  border: 2px solid #2d3945;
 }
 fieldset:nth-child(1) input::placeholder {
-  padding: 0 1em;
   color: rgba(153, 153, 153, 0.6);
 }
 fieldset:nth-child(1) input:nth-of-type(1)::placeholder, fieldset:nth-child(1) input:nth-of-type(2)::placeholder {
@@ -425,12 +434,93 @@ fieldset:nth-child(1) input:nth-of-type(1)::placeholder, fieldset:nth-child(1) i
 fieldset:nth-child(1) input:nth-last-of-type(1) {
   width: 50%;
   margin-left: 0;
+  margin-bottom: 30px;
 }
 fieldset:nth-child(1) select {
   display: block;
   width: 99%;
   margin-left: auto;
   margin-right: auto;
+  height: 3em;
+  border: none;
+  background-color: #eee;
+  border-radius: 3px;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding: 0 1em;
+}
+fieldset:nth-child(1) select:focus {
+  border: 2px solid #2d3945;
+}
+fieldset:nth-child(1) select :not(:nth-child(1)) {
+  color: #000000b3;
+}
+
+fieldset:nth-child(2) input,
+fieldset:nth-child(2) p,
+fieldset:nth-child(2) label {
+  display: inline-block;
+}
+fieldset:nth-child(2) legend {
+  border-top: 2px solid #2d3945;
+  width: 100%;
+}
+fieldset:nth-child(2) .wrapcheckform {
+  display: flex;
+  flex-direction: column;
+}
+fieldset:nth-child(2) label {
+  font-size: 0.9em;
+  padding-bottom: 0.6em;
+}
+fieldset:nth-child(2) input {
+  margin: 5px;
+}
+fieldset:nth-child(2) .choice:nth-last-child(1) {
+  margin-bottom: 1.5em;
+}
+fieldset:nth-child(2) p {
+  margin: 9px 0;
+}
+fieldset:nth-child(2) .labeltxt {
+  margin: 20px 0 7px;
+}
+fieldset:nth-child(2) textarea {
+  height: 3em;
+  border: none;
+  background-color: #eee;
+  border-radius: 3px;
+  padding-left: 1em;
+  padding-right: 1em;
+  width: 100%;
+  min-height: 100px;
+  border: none;
+}
+fieldset:nth-child(2) textarea:focus {
+  border: 2px solid #2d3945;
+}
+fieldset:nth-child(2) textarea::placeholder {
+  padding-top: 10px;
+  font-size: 0.8em;
+}
+
+.submit {
+  display: block;
+  margin: 1.5em 0;
+  line-height: 3em;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  background-color: #4ebbb5;
+  color: #fff;
+}
+
+.copyright {
+  width: 100%;
+  text-align: center;
+  font-style: italic;
+  color: rgba(153, 153, 153, 0.6);
 }
 
 /*# sourceMappingURL=style.css.map */

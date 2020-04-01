@@ -3,9 +3,24 @@
     font-size: 1.2em;
 }
 
-@mixin block($width: 100%) {
-    display: block;
+@mixin block($width: 100%, $dis: null) {
+    display: $dis;
     width: $width;
     margin-left: auto;
     margin-right: auto;
+}
+
+@mixin inputStyle {
+    height: 3em;
+    border: none;
+    background-color: #eee;
+    border-radius: 3px;
+    padding-left: 1em;
+    padding-right: 1em;
+
+    &:focus {
+        border: 2px solid $primary-color;
+    }
+
+    @content
 }
