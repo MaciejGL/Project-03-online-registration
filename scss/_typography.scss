@@ -6,14 +6,34 @@
     color: $white;
     background-color: $primary-color;
 
+    @media (min-width: 768px) {
+        & {
+            padding: 30px 0;
+            font-size: 1.6em;
+        }
+    }
+
     &-form {
         @include title;
         padding-top: 20px;
         color: $primary-color;
 
+        @media (min-width: 768px) {
+            & {
+                padding-top: 50px;
+                font-size: 1.6em;
+            }
+        }
+
         +p {
             padding-bottom: 27px;
             text-align: center;
+
+            @media (min-width: 768px) {
+                & {
+                    padding-bottom: 40px;
+                }
+            }
         }
     }
 }

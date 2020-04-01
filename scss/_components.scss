@@ -10,11 +10,18 @@ fieldset {
     margin-left: 0;
     margin-right: 0;
 
+
     legend {
         padding: 25px 0;
         font-weight: bold;
         font-size: 1.2em;
         color: $primary-color;
+
+        @media (min-width: 768px) {
+            & {
+                padding-top: 50px;
+            }
+        }
     }
 
     input:focus {
@@ -25,13 +32,21 @@ fieldset {
 
 fieldset:nth-child(1) {
 
+
     label {
-        @include block($dis: block);
-        padding: 1.2em 0;
+        @include block($dis: inline-block);
+        padding: 0.3em 0 1.2em;
+
+        @media (min-width: 768px) {
+            & {
+                width: 20%;
+                margin: 0 0;
+            }
+        }
     }
 
     input {
-        @include block(99%, block);
+        @include block(99%, inline-block);
         @include inputStyle;
         color: $secondary-color;
 
@@ -50,18 +65,38 @@ fieldset:nth-child(1) {
             width: 50%;
             margin-left: 0;
             margin-bottom: 30px;
+
+            @media (min-width: 768px) {
+                & {
+                    width: 25%;
+                }
+            }
+        }
+
+        @media (min-width: 768px) {
+            & {
+                width: 79%;
+                margin: 10px 0;
+            }
         }
     }
 
     select {
 
-        @include block(99%, block);
+        @include block(99%, inline-block);
         @include inputStyle;
 
         padding: 0 1em;
 
         :not(:nth-child(1)) {
             color: $secondary-color;
+        }
+
+        @media (min-width: 768px) {
+            & {
+                width: 79%;
+                margin: 10px 0;
+            }
         }
     }
 }
