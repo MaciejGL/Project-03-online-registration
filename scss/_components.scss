@@ -48,7 +48,7 @@ fieldset:nth-child(1) {
         @include block(99%, inline-block);
         @include inputStyle;
         color: $primary-color;
-
+        transition: .5s;
 
 
         &::placeholder {
@@ -83,6 +83,7 @@ fieldset:nth-child(1) {
 
         &:focus {
             border: 2px solid $additional-color;
+            background-color: $additional-color-light;
         }
     }
 

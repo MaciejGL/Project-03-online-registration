@@ -4,6 +4,8 @@ $primary-color: #2d3945;
 $secondary-color: lighten($primary-color, 30%);
 $secondary-color-light: lighten($primary-color, 50%);
 $additional-color: #4ebbb5;
+$additional-color-light: lighten($additional-color, 40%);
+
 
 $font: 'Merriweather',
 sans-serif;
